@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" creating an empty class"""
-
+"""Empty class created"""
 
 class Square:
-    """ this is an empty class"""
-    pass
+    """Square class defined an object"""
+    def __init__(self):
+        """Square class"""
+        pass
