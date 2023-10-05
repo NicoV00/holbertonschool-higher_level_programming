@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class squeare with size"""
+"""Class square with size"""
 
 
 class Square:
