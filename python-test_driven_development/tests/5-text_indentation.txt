@@ -1,0 +1,44 @@
+#-----------------------------------------------------
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+#-----------------------------------------------------
+# Test - 1:
+>>> text_indentation("""Lorem elit.    Quonam modo?""")
+Lorem elit.
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+
+
+#-----------------------------------------------------
+# Test - 2:
+>>> text_indentation("""Lorem elit: Quonam modo?""")
+Lorem elit:
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+
+
+#-----------------------------------------------------
+# Test - 3:
+>>> text_indentation(3)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+
+#-----------------------------------------------------
+# Test - 4:
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+#-----------------------------------------------------
+# Test - 5:
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
