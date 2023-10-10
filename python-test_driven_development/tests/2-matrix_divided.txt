@@ -1,0 +1,40 @@
+#-----------------------------------------------------
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+#-----------------------------------------------------
+# Test - 1:
+>>> matrix_divided([[10, 20, 30], [40, 50, 60]], 5)
+[[2.0, 4.0, 6.0], [8.0, 10.0, 12.0]]
+
+
+#-----------------------------------------------------
+# Test - 2: 
+>>> matrix_divided([[1, 2, 3], [4, 5, 6, 7]], 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+
+#-----------------------------------------------------
+# Test - 3:
+>>> matrix_divided([[1, "nicao", 3], [4, 4, "ove"]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+#-----------------------------------------------------
+# Test - 4:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "nicao")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+
+#-----------------------------------------------------
+# Test - 5:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
