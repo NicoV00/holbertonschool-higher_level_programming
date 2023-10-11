@@ -4,6 +4,9 @@
 
 class Rectangle():
     """Defines rectangle"""
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
@@ -15,6 +18,7 @@ class Rectangle():
             raise ValueError("height must be >= 0")
         self.__height = height
         self.__width = width
+        type(self).number_of_instances += 1
 
     def __str__(self):
         """string"""
