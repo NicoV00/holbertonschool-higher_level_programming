@@ -2,6 +2,6 @@
 """Task 0"""
 
 
-class Rectangle():
+class Rectangle:
     """Defines rectangle"""
     pass
