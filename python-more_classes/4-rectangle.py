@@ -27,10 +27,10 @@ class Rectangle():
             if i != self.__height - 1:
                 output_str += "\n"
         return output_str
-    
+
     def __repr__(self):
         """string representation"""
-        return("Rectangle({}, {})".format(self.width, self.height))
+        return ("Rectangle({}, {})".format(self.width, self.height))
 
     @property
     def height(self):
