@@ -92,4 +92,4 @@ class Rectangle():
 
     def square(self, size=0):
         """square"""
-        return Rectangle(size, size)
+        return self(size, size)
