@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 1"""
+"""Task 2"""
 
 
 class Rectangle():
@@ -43,3 +43,13 @@ class Rectangle():
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
+    def area(self):
+        """area of the rectangle"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """perimeter of the rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (self.__width * 2) + (self.__height * 2)
