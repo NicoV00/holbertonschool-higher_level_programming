@@ -41,3 +41,25 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
+
+    @property
+    def x(self):
+        """x getter"""
+        return self.__x
+
+    @x.setter
+    def x(self, x):
+        """x setter"""
+        self.x_valid(x)
+        self.__x = x
+
+    @property
+    def y(self):
+        """y getter"""
+        return self.__y
+
+    @y.setter
+    def y(self, y):
+        """y setter"""
+        self.y_valid(y)
+        self.__y = y
