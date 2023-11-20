@@ -14,8 +14,7 @@ if __name__ == "__main__":
                 JOIN states
                 ON state_id = states.id ORDER BY cities.id''')
     fetchs = cur.fetchall()
-    for x in range(len(fetchs)):
-        if fetchs[x][1] == sys.argv[4]:
-            print("{}".format(fetchs[x]))
+    for x in fetchs:
+            print(x)
 
     db.close()
