@@ -2,8 +2,10 @@
 """class my list"""
 
 
-class Mylist(list):
-    """Print list"""
+class MyList(list):
+    """Print a list in order."""
+
     def print_sorted(self):
-        """print"""
-        print(sorted(self))
+        if hasattr(self, '__str__'):
+            print(sorted(self))
+            return sorted(self)
