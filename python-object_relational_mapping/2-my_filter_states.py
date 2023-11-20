@@ -24,5 +24,5 @@ if __name__ == "__main__":
     for x in range(len(fetchs)):
         if fetchs[x][1] == sys.argv[4]:
             print("{}".format(fetchs[x]))
-
+    # close connection
     db_connection.close()
