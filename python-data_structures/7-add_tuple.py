@@ -10,7 +10,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
                 new_tuple[i] = tuple_a[i]
 
         if tuple_b is not None:
-            if (len(tuple_b) > i)
+            if (len(tuple_b) > i):
                 new_tuple[i] += tuple_b[i]
 
     return tuple(new_tuple)
