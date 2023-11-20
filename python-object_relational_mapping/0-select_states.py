@@ -1,22 +1,24 @@
 #!/usr/bin/python3
-# gets all states
+# task 0 that selects states
 
 
-if __name__ == '__main__':
-    import sys
+if __name__ == "__main__":
+    """,ain fun ca"""
     import MySQLdb
-    try:
-        # Database connection
-        db_connection = MySQLdb.connect(
-            "localhost",
-            sys.argv[1],
-            sys.argv[2],
-            sys.argv[3])
-    except MySQLdb.OperationalError:
-        print("Can't connect to database")
-    cursor = db_connection.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    states = cursor.fetchall()
+    import sys
+    user_name = sys.argv[1]
+    user_passw = sys.argv[2]
+    db_name = sys.argv[3]
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=user_name,
+        passwd=user_passw,
+        db=db_name
+        )
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    states = cur.fetchall()
     for state in states:
         print(state)
-    db_connection.close()
+    db.close()
