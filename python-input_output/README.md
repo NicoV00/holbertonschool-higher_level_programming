@@ -1,1 +1,1 @@
-input output python
+python
