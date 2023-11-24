@@ -13,7 +13,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name.like("%a%"))
+    states = (
+        session.query(State).filter(State.name.like(argv[4]))
+        .order_by(State.id)
+    )
 
     if len(list(states)) == 0:
         print("Not found")
